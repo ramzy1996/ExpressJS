@@ -15,6 +15,11 @@ app.use(express.json());
 // });
 app.use(morgan("dev"));
 
+//Router
+const PersonRouter = require("./PersonRoute");
+app.use("/persons", PersonRouter);
+
+
 // const myPerson = [
 //   {
 //     id: uuid.v4(),
